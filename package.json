@@ -1,0 +1,1 @@
+{"name":"controle-financeiro","private":true,"workspaces":["apps/*","packages/*"],"scripts":{"dev":"concurrently \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"","dev:api":"npm run dev -w apps/api","dev:web":"npm run dev -w apps/web","mobile":"npm run start -w apps/mobile"},"devDependencies":{"concurrently":"^9.1.2"}}

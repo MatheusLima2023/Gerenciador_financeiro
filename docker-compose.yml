@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: financeiro
+      POSTGRES_PASSWORD: financeiro
+      POSTGRES_DB: financeiro
+    ports: ["5432:5432"]
+    volumes: ["pgdata:/var/lib/postgresql/data", "./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro"]
+volumes:
+  pgdata:
